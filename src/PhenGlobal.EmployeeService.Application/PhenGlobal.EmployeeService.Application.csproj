@@ -10,4 +10,8 @@
     <ProjectReference Include="..\PhenGlobal.EmployeeService.Domain\PhenGlobal.EmployeeService.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" />
+  </ItemGroup>
+
 </Project>
