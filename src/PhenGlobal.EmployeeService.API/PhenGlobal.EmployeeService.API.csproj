@@ -7,6 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\PhenGlobal.EmployeeService.Application\PhenGlobal.EmployeeService.Application.csproj" />
+    <ProjectReference Include="..\PhenGlobal.EmployeeService.Infrastructure\PhenGlobal.EmployeeService.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" />
     <PackageReference Include="Swashbuckle.AspNetCore" />
   </ItemGroup>

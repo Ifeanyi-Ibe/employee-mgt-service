@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\PhenGlobal.EmployeeService.Application\PhenGlobal.EmployeeService.Application.csproj" />
+  </ItemGroup>
+
 </Project>
