@@ -1,11 +1,7 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using PhenGlobal.EmployeeService.Application.Common;
+using PhenGlobal.EmployeeService.Application.Features.LeaveTypes.DTOs;
 
-using PhenGlobal.EmployeeService.Application.DTOs.Common;
-
-namespace PhenGlobal.EmployeeService.Application.DTOs
+namespace PhenGlobal.EmployeeService.Application.Features.LeaveAllocation.DTOs
 {
     public class LeaveAllocationDto : BaseDto
     {
@@ -13,5 +9,6 @@ namespace PhenGlobal.EmployeeService.Application.DTOs
         public int Period { get; set; } = default!;
         public LeaveTypeDto LeaveType { get; set; } = default!;
         public Guid LeaveTypeId { get; set; }
+
     }
 }

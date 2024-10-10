@@ -1,11 +1,7 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using PhenGlobal.EmployeeService.Application.Common;
+using PhenGlobal.EmployeeService.Application.Features.LeaveTypes.DTOs;
 
-using PhenGlobal.EmployeeService.Application.DTOs.Common;
-
-namespace PhenGlobal.EmployeeService.Application.DTOs
+namespace PhenGlobal.EmployeeService.Application.Features.LeaveRequests.DTOs
 {
     public class LeaveRequestDto : BaseDto
     {
