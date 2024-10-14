@@ -1,7 +1,7 @@
 using PhenGlobal.EmployeeService.Application.Common;
 using PhenGlobal.EmployeeService.Application.Features.LeaveTypes.DTOs;
 
-namespace PhenGlobal.EmployeeService.Application.Features.LeaveAllocation.DTOs
+namespace PhenGlobal.EmployeeService.Application.Features.LeaveAllocations.DTOs
 {
     public class LeaveAllocationDto : BaseDto
     {
