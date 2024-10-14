@@ -10,4 +10,9 @@
     <ProjectReference Include="..\PhenGlobal.EmployeeService.Application\PhenGlobal.EmployeeService.Application.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" />
+  </ItemGroup>
+
 </Project>
