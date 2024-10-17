@@ -1,7 +1,7 @@
 using AutoMapper;
 using MediatR;
 using PhenGlobal.EmployeeService.Application.Features.LeaveTypes.DTOs;
-using PhenGlobal.EmployeeService.Application.Persistence.Contracts;
+using PhenGlobal.EmployeeService.Application.Contracts.Persistence;
 
 namespace PhenGlobal.EmployeeService.Application.Features.LeaveTypes.Queries
 {

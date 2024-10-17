@@ -1,7 +1,9 @@
 using AutoMapper;
 using MediatR;
+using PhenGlobal.EmployeeService.Application.Exceptions;
 using PhenGlobal.EmployeeService.Application.Features.LeaveRequests.DTOs;
-using PhenGlobal.EmployeeService.Application.Persistence.Contracts;
+using PhenGlobal.EmployeeService.Application.Contracts.Persistence;
+using PhenGlobal.EmployeeService.Domain.Entities;
 
 namespace PhenGlobal.EmployeeService.Application.Features.LeaveRequests.Commands.UpdateLeaveRequestApproval
 {
@@ -18,7 +20,8 @@ namespace PhenGlobal.EmployeeService.Application.Features.LeaveRequests.Commands
         
         public async Task<LeaveRequestDto> Handle(UpdateLeaveRequestApprovalCommand request, CancellationToken cancellationToken)
         {
-            var leaveRequest = await _leaveRequestRepository.Get(request.Id);
+            var leaveRequest = await _leaveRequestRepository.Get(request.Id) ?? throw new NotFoundException(nameof(LeaveRequest), request.Id);
+            
             leaveRequest.Approved = request.Approved;
             leaveRequest = await _leaveRequestRepository.Update(leaveRequest);
             return _mapper.Map<LeaveRequestDto>(leaveRequest);

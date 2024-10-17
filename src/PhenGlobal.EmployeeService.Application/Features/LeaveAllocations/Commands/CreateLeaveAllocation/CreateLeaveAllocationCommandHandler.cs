@@ -1,7 +1,7 @@
 using AutoMapper;
 using MediatR;
 using PhenGlobal.EmployeeService.Application.Features.LeaveAllocations.DTOs;
-using PhenGlobal.EmployeeService.Application.Persistence.Contracts;
+using PhenGlobal.EmployeeService.Application.Contracts.Persistence;
 using PhenGlobal.EmployeeService.Domain.Entities;
 
 namespace PhenGlobal.EmployeeService.Application.Features.LeaveAllocations.Commands

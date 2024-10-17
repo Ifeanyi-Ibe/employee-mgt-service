@@ -1,5 +1,5 @@
 using FluentValidation;
-using PhenGlobal.EmployeeService.Application.Persistence.Contracts;
+using PhenGlobal.EmployeeService.Application.Contracts.Persistence;
 
 namespace PhenGlobal.EmployeeService.Application.Features.LeaveRequests.Commands.CreateLeaveRequest
 {

@@ -1,6 +1,8 @@
 using AutoMapper;
 using MediatR;
-using PhenGlobal.EmployeeService.Application.Persistence.Contracts;
+using PhenGlobal.EmployeeService.Application.Exceptions;
+using PhenGlobal.EmployeeService.Application.Contracts.Persistence;
+using PhenGlobal.EmployeeService.Domain.Entities;
 
 namespace PhenGlobal.EmployeeService.Application.Features.LeaveTypes.Commands.UpdateLeaveType
 {
@@ -17,8 +19,8 @@ namespace PhenGlobal.EmployeeService.Application.Features.LeaveTypes.Commands.Up
         
         public async Task<Unit> Handle(UpdateLeaveTypeCommand request, CancellationToken cancellationToken)
         {
-            var leaveType = await _leaveTypeRepository.Get(request.Id);
-
+            var leaveType = await _leaveTypeRepository.Get(request.Id) ?? throw new NotFoundException(nameof(LeaveType), request.Id);
+            
             _mapper.Map(request, leaveType);
 
             await _leaveTypeRepository.Update(leaveType);

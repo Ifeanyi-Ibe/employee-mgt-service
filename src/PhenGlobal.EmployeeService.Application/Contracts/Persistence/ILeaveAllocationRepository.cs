@@ -1,10 +1,10 @@
 using PhenGlobal.EmployeeService.Domain.Entities;
 
-namespace PhenGlobal.EmployeeService.Application.Persistence.Contracts
+namespace PhenGlobal.EmployeeService.Application.Contracts.Persistence
 {
     public interface ILeaveAllocationRepository : IGenericRepository<LeaveAllocation>
     {
         Task<LeaveAllocation> GetLeaveAllocationWithDetails(Guid id);
-        Task<List<LeaveAllocation>> GetLeaveAllocationsWithDetails();
+        Task<IReadOnlyCollection<LeaveAllocation>> GetLeaveAllocationsWithDetails();
     }
 }

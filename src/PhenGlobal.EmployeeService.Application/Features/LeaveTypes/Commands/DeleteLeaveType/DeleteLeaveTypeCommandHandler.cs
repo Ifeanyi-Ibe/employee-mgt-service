@@ -1,5 +1,5 @@
 using MediatR;
-using PhenGlobal.EmployeeService.Application.Persistence.Contracts;
+using PhenGlobal.EmployeeService.Application.Contracts.Persistence;
 using PhenGlobal.EmployeeService.Application.Exceptions;
 using PhenGlobal.EmployeeService.Domain.Entities;
 

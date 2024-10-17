@@ -2,7 +2,7 @@ using MediatR;
 using AutoMapper;
 
 using PhenGlobal.EmployeeService.Application.Features.LeaveRequests.DTOs;
-using PhenGlobal.EmployeeService.Application.Persistence.Contracts;
+using PhenGlobal.EmployeeService.Application.Contracts.Persistence;
 
 namespace PhenGlobal.EmployeeService.Application.Features.LeaveRequests.Queries
 {

@@ -1,7 +1,8 @@
 using AutoMapper;
 using MediatR;
+using PhenGlobal.EmployeeService.Application.Exceptions;
 using PhenGlobal.EmployeeService.Application.Features.LeaveAllocations.DTOs;
-using PhenGlobal.EmployeeService.Application.Persistence.Contracts;
+using PhenGlobal.EmployeeService.Application.Contracts.Persistence;
 using PhenGlobal.EmployeeService.Domain.Entities;
 
 namespace PhenGlobal.EmployeeService.Application.Features.LeaveAllocations.Commands.UpdateLeaveAllocation
@@ -18,7 +19,7 @@ namespace PhenGlobal.EmployeeService.Application.Features.LeaveAllocations.Comma
         }
         public async Task<LeaveAllocationDto> Handle(UpdateLeaveAllocationCommand request, CancellationToken cancellationToken)
         {
-            var leaveAllocation = await _leaveAllocationRepository.Get(request.Id);
+            var leaveAllocation = await _leaveAllocationRepository.Get(request.Id) ?? throw new NotFoundException(nameof(LeaveAllocation), request.Id);
 
             _mapper.Map(request, leaveAllocation);
 

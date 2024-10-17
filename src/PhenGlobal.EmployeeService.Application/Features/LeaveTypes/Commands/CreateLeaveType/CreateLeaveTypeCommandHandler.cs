@@ -1,6 +1,6 @@
 using MediatR;
 using AutoMapper;
-using PhenGlobal.EmployeeService.Application.Persistence.Contracts;
+using PhenGlobal.EmployeeService.Application.Contracts.Persistence;
 using PhenGlobal.EmployeeService.Domain.Entities;
 using PhenGlobal.EmployeeService.Application.Features.LeaveTypes.DTOs;
 using PhenGlobal.EmployeeService.Application.Exceptions;
